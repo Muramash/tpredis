@@ -3,6 +3,25 @@ extends ../layout
 block content
   h1= title
   p Voici la liste des utilisateurs :
-  ul
+
+  a(href='/users/add') Ajouter un utilisateur
+  table(border=1)
+    tr
+      th Id
+      th Pseudo
+      th Prénom
+      th Nom
+      th Email
+      th Action
+
     each user in users
-      li #{user.firstname} #{user.lastname}
+      tr
+        td #{user.rowid}
+        td #{user.pseudo}
+        td #{user.firstname}
+        td #{user.lastname}
+        td #{user.email}
+        td
+          a(href='/users/' + user.rowid) Voir
+          a(href='/users/' + user.rowid + '/edit') Éditer
+          a(href='/users/' + user.rowid + '?_method=delete') Supprimer

@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  table(border=1)
+    tr
+      th Pseudo
+      td= user.pseudo
+    tr
+      th Prénom
+      td= user.firstname
+    tr
+      th Nom
+      td= user.lastname
+    tr
+      th Email
+      td= user.email

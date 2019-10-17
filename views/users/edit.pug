@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  form(
+    method="post"
+    action=action
+  )
+    label
+      strong Pseudo
+      input(name="pseudo" value=user.pseudo)
+
+    label
+      strong Prénom
+      input(name="firstname" value=user.firstname)
+
+    label
+      strong Nom
+      input(name="lastname" value=user.lastname)
+
+    label
+      strong Email
+      input(name="email" value=user.email)
+
+    label
+      strong Mot de passe
+      input(type="password" name="password")
+
+    label
+      input(type="submit" value="Envoyer")
