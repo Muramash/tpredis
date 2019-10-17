@@ -1,0 +1,17 @@
+{
+  "name": "njs-303b",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "ioredis": "^4.14.1",
+    "method-override": "^3.0.0",
+    "node-sass-middleware": "^0.11.0",
+    "pug": "^2.0.0-beta6",
+    "uuid": "^3.3.3"
+  }
+}

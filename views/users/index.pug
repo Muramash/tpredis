@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  h1= title
+  p Voici la liste des utilisateurs :
+  ul
+    each user in users
+      li #{user.firstname} #{user.lastname}

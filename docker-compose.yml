@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:4.0.14-alpine
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '6379:6379'
+    expose:
+      # Opens port 3306 on the container
+      - '6379'
+
+  node_app:
+    build: .
+    restart: on-failure
+    ports:
+      - 3000:3000
+    volumes:
+      - /app/node_modules
+
+    links:
+      - redis
+    environment:
+     - REDIS_HOST=redis
+     - NODE_ENV=development
+     - PORT=3000
+     - REDIS_PORT=6379
+
