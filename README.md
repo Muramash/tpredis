@@ -4,11 +4,10 @@ Simple ExpressJS skeleton.
 
 ## Install
 
-    git clone https://github.com/Tronix117/wik-njs-303-skeleton.git
-    cd wik-njs-303-skeleton
-    npm install
+    git clone https://github.com/Muramash/tpredis
+    cd tpredis
+    docker-compose up
 
 ## Usage
 
-    npm start
-
+    just go with the flow
